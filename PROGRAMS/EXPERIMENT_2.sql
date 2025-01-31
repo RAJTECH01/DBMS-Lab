@@ -33,10 +33,10 @@ foreign key (CourseID) references Courses(CourseID)
 );
 
 #Insert Students Table
-insert into Students(StudentID,FirstName) values(1,'UNKNOWN');
-insert into Students(StudentID,FirstName) values(2,'UNKNOWN');
-insert into Students(StudentID,FirstName) values(3,'UNKNOWN');
-insert into Students(StudentID,FirstName) values(4,'UNKNOWN');
+insert into Students(StudentID,FirstName) values(1,'RAJ');
+insert into Students(StudentID,FirstName) values(2,'RAJ');
+insert into Students(StudentID,FirstName) values(3,'RAJ');
+insert into Students(StudentID,FirstName) values(4,'RAJ');
 
 
 #Insert Courses Table
