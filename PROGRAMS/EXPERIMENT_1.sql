@@ -35,16 +35,16 @@ alter table Employee add constraint check_salary check(Salary > 10000);
 alter table Employee modify Pan_Number varchar(10) unique;
 
 #Insert 
-insert into Employee(Ename,Salary,Pan_Number) values('UNKNOWN',10001,8668049515);select * from Employee;
-insert into Employee(Ename,Salary,Pan_Number) values('SIVA',10001,8668049516);select * from Employee;
-insert into Employee(Ename,Salary,Pan_Number) values('MITHUN',10001,8668049517);select * from Employee;
-insert into Employee(Ename,Salary,Pan_Number) values('YOKESH',10001,8668049518);select * from Employee;
+insert into Employee(Ename,Salary,Pan_Number) values('RAJ',10001,8668049515);select * from Employee;
+insert into Employee(Ename,Salary,Pan_Number) values('SACHIN',10001,8668049516);select * from Employee;
+insert into Employee(Ename,Salary,Pan_Number) values('MEGA',10001,8668049517);select * from Employee;
+insert into Employee(Ename,Salary,Pan_Number) values('VIGNESH',10001,8668049518);select * from Employee;
 
 #Update
-update Employee set Ejob='HACKER' where Ename='UNKNOWN';select * from Employee;
-update Employee set Ejob='PC BUILDER' where Ename='SIVA';select * from Employee;
-update Employee set Ejob='SPEACER & GUIDER' where Ename='MITHUN';select * from Employee;
-update Employee set Ejob='LEARNER' where Ename='YOKESH';select * from Employee;
+update Employee set Ejob='RAJ' where Ename='RAJ';select * from Employee;
+update Employee set Ejob='PC BUILDER' where Ename='SACHIN';select * from Employee;
+update Employee set Ejob='SPEACER & GUIDER' where Ename='MEGA';select * from Employee;
+update Employee set Ejob='LEARNER' where Ename='VIGNESH';select * from Employee;
 
 #Delete
 delete from Employee where Emp_Id=1;select * from Employee;
