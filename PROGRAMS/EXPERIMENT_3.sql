@@ -20,14 +20,14 @@ EnrollmentDate date
 
 #insert data Students table
 -- CSE
-insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('UNKNOWN','CSE',65000,'2025-01-24');
-insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('SIVA','CSE',60000,'2024-01-24');
-insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('MITHUN','CSE',85000,'2025-01-24');
-insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('YOKESh','CSE',100000,'2023-01-24');
+insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('RAJ','CSE',65000,'2025-01-24');
+insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('SACHIN','CSE',60000,'2024-01-24');
+insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('MEGA','CSE',85000,'2025-01-24');
+insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('VIGNESH','CSE',100000,'2023-01-24');
 -- IT
-insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('HARI','IT',100000,'2023-01-24');
-insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('KAVI','IT',100000,'2023-01-24');
-insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('DEEPACK','IT',100000,'2023-01-24');
+insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('PRASANTH','IT',100000,'2023-01-24');
+insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('PARTHA','IT',100000,'2023-01-24');
+insert into Students(Student_Name,Department,Fees,EnrollmentDate) values('HUZIAF','IT',100000,'2023-01-24');
 
 #‘where’ clause conditions and also implement aggregate functions. 
 
