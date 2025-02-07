@@ -1,52 +1,44 @@
-/* 
-Create a database table, add constraints (primary key, unique, check, Not null), insert rows, 
-update and delete rows using SQL DDL and DML commands. 
-*/
+CREATE SCHEMA IF NOT EXISTS EXPERIMENT_1;
 
+-- Use the schema
+USE EXPERIMENT_1;
 
-create schema EXPERIMENT_1;
+-- Create Employee Table with constraints
+CREATE TABLE Employee (
+    Emp_Id INT AUTO_INCREMENT PRIMARY KEY,
+    Ename VARCHAR(50) NOT NULL,
+    Ejob VARCHAR(100) DEFAULT 'Not Assigned',
+    Salary INT CHECK (Salary > 10000),
+    Pan_Number VARCHAR(10) UNIQUE
+);
 
+-- Insert data
+INSERT INTO Employee (Ename, Salary, Pan_Number) VALUES
+('RAJ', 10001, '8668049515'),
+('SACHIN', 10001, '8668049516'),
+('MEGA', 10001, '8668049517'),
+('VIGNESH', 10001, '8668049518');
 
--- Try Execution 2ND time This Code First 
--- drop schema EXPERIMENT_1
+-- Verify inserted data
+SELECT * FROM Employee;
 
+-- Update Job Titles
+UPDATE Employee SET Ejob = 'RAJ' WHERE Ename = 'RAJ';
+UPDATE Employee SET Ejob = 'PC BUILDER' WHERE Ename = 'SACHIN';
+UPDATE Employee SET Ejob = 'SPEAKER & GUIDE' WHERE Ename = 'MEGA';
+UPDATE Employee SET Ejob = 'LEARNER' WHERE Ename = 'VIGNESH';
 
-use EXPERIMENT_1;
+-- Verify updates
+SELECT * FROM Employee;
 
-#Creating a Table
-create table Employee(
-Emp_Id int,
-Ename varchar(50),
-Ejob varchar(100),
-Salary int,
-Pan_Number varchar(10)
-);select * from Employee;
+-- Delete a specific employee by ID
+DELETE FROM Employee WHERE Emp_Id = 1;
 
+-- Verify deletion
+SELECT * FROM Employee;
 
-#add constraints (primary key, unique, check, Not null)
-alter table Employee modify Emp_Id int primary key auto_increment;
+-- Delete all data and reset AUTO_INCREMENT
+TRUNCATE TABLE Employee;
 
-alter table Employee modify Ename varchar(50) not null;
-
-alter table Employee modify Ejob varchar(100) default 'Not Assign';
-
-alter table Employee add constraint check_salary check(Salary > 10000);
-
-alter table Employee modify Pan_Number varchar(10) unique;
-
-#Insert 
-insert into Employee(Ename,Salary,Pan_Number) values('RAJ',10001,8668049515);select * from Employee;
-insert into Employee(Ename,Salary,Pan_Number) values('SACHIN',10001,8668049516);select * from Employee;
-insert into Employee(Ename,Salary,Pan_Number) values('MEGA',10001,8668049517);select * from Employee;
-insert into Employee(Ename,Salary,Pan_Number) values('VIGNESH',10001,8668049518);select * from Employee;
-
-#Update
-update Employee set Ejob='RAJ' where Ename='RAJ';select * from Employee;
-update Employee set Ejob='PC BUILDER' where Ename='SACHIN';select * from Employee;
-update Employee set Ejob='SPEACER & GUIDER' where Ename='MEGA';select * from Employee;
-update Employee set Ejob='LEARNER' where Ename='VIGNESH';select * from Employee;
-
-#Delete
-delete from Employee where Emp_Id=1;select * from Employee;
-#Delete All Data
-delete from Employee;select * from Employee;
+-- Verify the table is empty
+SELECT * FROM Employee;
